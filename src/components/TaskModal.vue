@@ -1,5 +1,5 @@
 <template>
-  <Modal :is-show="false">
+  <Modal :is-show="taskModalStore.isShow">
     <h3 class="text-h2 font-semibold mb-6">Создать новую задачу</h3>
     <textarea
       type="text"
@@ -14,5 +14,7 @@
 </template>
 <script setup>
 import Modal from "@/components/Modal.vue";
+import { useTaskModalStore } from "../store/task-modal";
+const taskModalStore = useTaskModalStore();
 </script>
 <style lang="scss"></style>
